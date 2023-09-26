@@ -1,10 +1,14 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Avatar } from "@mui/material";
+import profileImage from './assets/images/profile-image.JPG'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* Avatar */}
+      <Avatar
+      src={profileImage}
+      alt="FlucoMars"
+      />
       <View>{/* Links */}</View>
     </View>
   );
