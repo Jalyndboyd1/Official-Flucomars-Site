@@ -1,10 +1,22 @@
 import React, { useCallback } from "react";
-import { Linking, Button, View, StyleSheet } from "react-native";
+import { Linking, Pressable, View, StyleSheet, Text } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: "1rem",
-    width: "16rem",
+    marginBottom: "1rem",
+    backgroundColor: "#680747",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    width: "100%",
+  },
+  socialLink: {
+    padding: "10px",
+    alignItems: "center",
+    width: "20rem",
+  },
+  text: {
+    color: "#fff",
   },
 });
 
@@ -22,7 +34,10 @@ function SocialLink({ url, nameOfSocial }) {
 
   return (
     <View style={styles.container}>
-      <Button title={nameOfSocial} onPress={handlePress} />
+      {/* <Button title={nameOfSocial} onPress={handlePress} style={styles.socialLink}/> */}
+      <Pressable onPress={handlePress} style={styles.socialLink}>
+        <Text style={styles.text}>{nameOfSocial}</Text>
+      </Pressable>
     </View>
   );
 }
