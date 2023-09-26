@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Avatar } from "@mui/material";
 import profileImage from "./assets/images/profile-image.JPG";
 import logo from "./assets/images/logo.png";
@@ -7,6 +7,10 @@ import igLogo from "./assets/images/ig-logo.png";
 import twitterLogo from "./assets/images/twitter-logo.png";
 import tiktokLogo from "./assets/images/tiktok-logo.png";
 import pressLogo from "./assets/images/press-logo.png";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+import featuredTrack from "./assets/tracks/apr.m4a";
+import './App.css'
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +26,19 @@ const styles = StyleSheet.create({
     width: "200px",
     marginRight: "20px",
   },
+  audioPlayer: {
+    borderTopColor: "#fff",
+    marginTop: "10px",
+    color:'#680747'
+  },
+  audioPlayerContainer: {
+    borderRadius: 10,
+    boxShadow: "-3px 9px 29px rgba(0, 0, 0, 0.2)",
+    marginBottom: "1rem",
+    padding: "1rem",
+    alignItems: "center",
+    width: "100%",
+  },
 });
 
 export default function App() {
@@ -33,6 +50,15 @@ export default function App() {
         sx={{ width: 98, height: 98 }}
       />
       <img src={logo} alt="" style={styles.logo} />
+      <View style={styles.audioPlayerContainer}>
+        <Text>Ain't Playing Round</Text>
+        <AudioPlayer
+          src={featuredTrack}
+          onPlay={(e) => console.log("onPlay")}
+          style={styles.audioPlayer}
+        />
+      </View>
+      <h4>Social Media</h4>
       <View>
         <Link
           nameOfSocial={"Instagram"}

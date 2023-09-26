@@ -1,0 +1,11 @@
+.rhap_play-pause-button {
+  color: #680747;
+}
+
+.rhap_container {
+  box-shadow: none !important;
+}
+
+.rhap_volume-container, .rhap_repeat-button {
+    display: none;
+}
