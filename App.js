@@ -1,8 +1,12 @@
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Avatar } from "@mui/material";
 import profileImage from "./assets/images/profile-image.JPG";
 import logo from "./assets/images/logo.png";
 import Link from "./src/components/SocialLink";
+import igLogo from "./assets/images/ig-logo.png";
+import twitterLogo from "./assets/images/twitter-logo.png";
+import tiktokLogo from "./assets/images/tiktok-logo.png";
+import pressLogo from "./assets/images/press-logo.png";
 
 const styles = StyleSheet.create({
   container: {
@@ -33,12 +37,22 @@ export default function App() {
         <Link
           nameOfSocial={"Instagram"}
           url="https://www.instagram.com/flucomars/"
+          socialLogo={igLogo}
         />
-        <Link nameOfSocial={"Twitter"} url="https://twitter.com/Flucomars" />
-        <Link nameOfSocial={"Tiktok"} url="https://www.tiktok.com/@flucomars" />
+        <Link
+          nameOfSocial={"Twitter"}
+          url="https://twitter.com/Flucomars"
+          socialLogo={twitterLogo}
+        />
+        <Link
+          nameOfSocial={"Tiktok"}
+          url="https://www.tiktok.com/@flucomars"
+          socialLogo={tiktokLogo}
+        />
         <Link
           nameOfSocial={"Fluco Press Kit"}
           url="https://www.reverbnation.com/flucomars"
+          socialLogo={pressLogo}
         />
       </View>
     </View>

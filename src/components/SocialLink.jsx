@@ -14,13 +14,21 @@ const styles = StyleSheet.create({
     padding: "10px",
     alignItems: "center",
     width: "20rem",
+    flexDirection: "row",
   },
   text: {
     color: "#fff",
   },
+  socialLogo: {
+    height: "40px",
+    width: "40px",
+    marginRight: "3rem",
+    marginLeft: "3rem",
+    objectFit: "contain",
+  },
 });
 
-function SocialLink({ url, nameOfSocial }) {
+function SocialLink({ url, nameOfSocial, socialLogo }) {
   const handlePress = useCallback(async () => {
     // Checking if the link is supported for links with custom URL scheme.
     const supported = await Linking.canOpenURL(url);
@@ -36,6 +44,7 @@ function SocialLink({ url, nameOfSocial }) {
     <View style={styles.container}>
       {/* <Button title={nameOfSocial} onPress={handlePress} style={styles.socialLink}/> */}
       <Pressable onPress={handlePress} style={styles.socialLink}>
+        <img src={socialLogo} style={styles.socialLogo} />
         <Text style={styles.text}>{nameOfSocial}</Text>
       </Pressable>
     </View>
