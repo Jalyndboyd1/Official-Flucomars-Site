@@ -1,16 +1,33 @@
-import { StyleSheet, View, Button } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Avatar } from "@mui/material";
 import profileImage from "./assets/images/profile-image.JPG";
+import Link from "./src/components/SocialLink";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Avatar src={profileImage} alt="FlucoMars" />
+      <Avatar
+        src={profileImage}
+        alt="FlucoMars"
+        sx={{ width: 98, height: 98 }}
+      />
       <View>
-        <Button title="Fluco Gram" />
-        <Button title="Fluco Twitter" />
-        <Button title="Fluco Tok" />
-        <Button title="Fluco Press" />
+        <Link
+          nameOfSocial={"Fluco Gram"}
+          url="https://www.instagram.com/flucomars/"
+        />
+        <Link
+          nameOfSocial={"Twitter"}
+          url="https://www.instagram.com/flucomars/"
+        />
+        <Link
+          nameOfSocial={"Tiktok"}
+          url="https://www.instagram.com/flucomars/"
+        />
+        <Link
+          nameOfSocial={"Fluco Press Kit"}
+          url="https://www.instagram.com/flucomars/"
+        />
       </View>
     </View>
   );
@@ -21,5 +38,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
+    padding: "1rem",
   },
 });
