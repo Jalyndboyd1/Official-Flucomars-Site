@@ -6,11 +6,12 @@ import Link from "./src/components/SocialLink";
 import igLogo from "./assets/images/ig-logo.png";
 import twitterLogo from "./assets/images/twitter-logo.png";
 import tiktokLogo from "./assets/images/tiktok-logo.png";
+import spotifyLogo from "./assets/images/spotify-logo.png";
 import pressLogo from "./assets/images/press-logo.png";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import featuredTrack from "./assets/tracks/apr.m4a";
-import './App.css'
+import "./App.css";
 
 const styles = StyleSheet.create({
   container: {
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   audioPlayer: {
     borderTopColor: "#fff",
     marginTop: "10px",
-    color:'#680747'
+    color: "#680747",
   },
   audioPlayerContainer: {
     borderRadius: 10,
@@ -52,12 +53,12 @@ export default function App() {
       <img src={logo} alt="" style={styles.logo} />
       <View style={styles.audioPlayerContainer}>
         <Text>Ain't Playing Round</Text>
-        <AudioPlayer
-          src={featuredTrack}
-          onPlay={(e) => console.log("onPlay")}
-          style={styles.audioPlayer}
-        />
+        <AudioPlayer src={featuredTrack} style={styles.audioPlayer} />
       </View>
+      <Link
+        url="https://open.spotify.com/artist/2Hx7BLFGcQqLmaJKB5rHX2?si=GQ9i5ExOQ46ZY7RuPJ3_ig "
+        socialLogo={spotifyLogo}
+      />
       <h4>Social Media</h4>
       <View>
         <Link

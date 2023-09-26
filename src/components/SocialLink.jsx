@@ -16,12 +16,24 @@ const styles = StyleSheet.create({
     width: "20rem",
     flexDirection: "row",
   },
+  socialLinkImageOnly: {
+    alignItems: "center",
+    width: "20rem",
+    justifyContent: "center",
+  },
   text: {
     color: "#fff",
   },
   socialLogo: {
     height: "40px",
     width: "40px",
+    marginRight: "3rem",
+    marginLeft: "3rem",
+    objectFit: "contain",
+  },
+  socialLogoImageOnly: {
+    height: "120px",
+    width: "120px",
     marginRight: "3rem",
     marginLeft: "3rem",
     objectFit: "contain",
@@ -42,11 +54,16 @@ function SocialLink({ url, nameOfSocial, socialLogo }) {
 
   return (
     <View style={styles.container}>
-      {/* <Button title={nameOfSocial} onPress={handlePress} style={styles.socialLink}/> */}
-      <Pressable onPress={handlePress} style={styles.socialLink}>
-        <img src={socialLogo} style={styles.socialLogo} />
-        <Text style={styles.text}>{nameOfSocial}</Text>
-      </Pressable>
+      {nameOfSocial ? (
+        <Pressable onPress={handlePress} style={styles.socialLink}>
+          <img src={socialLogo} style={styles.socialLogo} />
+          <Text style={styles.text}>{nameOfSocial}</Text>
+        </Pressable>
+      ) : (
+        <Pressable onPress={handlePress} style={styles.socialLinkImageOnly}>
+          <img src={socialLogo} style={styles.socialLogoImageOnly} />
+        </Pressable>
+      )}
     </View>
   );
 }
