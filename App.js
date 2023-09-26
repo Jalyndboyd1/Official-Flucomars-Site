@@ -3,6 +3,16 @@ import { Avatar } from "@mui/material";
 import profileImage from "./assets/images/profile-image.JPG";
 import Link from "./src/components/SocialLink";
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    padding: "1rem",
+    fontFamily: "Arial",
+  },
+});
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -18,26 +28,17 @@ export default function App() {
         />
         <Link
           nameOfSocial={"Twitter"}
-          url="https://www.instagram.com/flucomars/"
+          url="https://twitter.com/Flucomars"
         />
         <Link
           nameOfSocial={"Tiktok"}
-          url="https://www.instagram.com/flucomars/"
+          url="https://www.tiktok.com/@flucomars"
         />
         <Link
           nameOfSocial={"Fluco Press Kit"}
-          url="https://www.instagram.com/flucomars/"
+          url="https://www.reverbnation.com/flucomars"
         />
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    padding: "1rem",
-  },
-});
