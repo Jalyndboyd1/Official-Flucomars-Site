@@ -1,20 +1,22 @@
 import React, { useCallback } from "react";
-import { Linking, TouchableOpacity, View, StyleSheet } from "react-native";
+import { Linking, Pressable, View, StyleSheet, Text } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: "1rem",
-    backgroundColor: "#007BFF",
+    marginBottom: "1rem",
+    backgroundColor: "#680747",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 10,
     width: "100%",
-    color: "#fff",
   },
   socialLink: {
     padding: "10px",
     alignItems: "center",
     width: "20rem",
+  },
+  text: {
+    color: "#fff",
   },
 });
 
@@ -33,9 +35,9 @@ function SocialLink({ url, nameOfSocial }) {
   return (
     <View style={styles.container}>
       {/* <Button title={nameOfSocial} onPress={handlePress} style={styles.socialLink}/> */}
-      <TouchableOpacity onPress={handlePress} style={styles.socialLink}>
-        {nameOfSocial}
-      </TouchableOpacity>
+      <Pressable onPress={handlePress} style={styles.socialLink}>
+        <Text style={styles.text}>{nameOfSocial}</Text>
+      </Pressable>
     </View>
   );
 }
