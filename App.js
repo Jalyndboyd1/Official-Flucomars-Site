@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} id="root">
       <Avatar
         src={profileImage}
         alt="FlucoMars"
